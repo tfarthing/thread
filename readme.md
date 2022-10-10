@@ -15,8 +15,7 @@ int main(int argc, char** argv) {
 		};
 		t.interrupt( );
 		t.join( );
-	}
-	catch ( std::exception & e ) {
+	} catch ( std::exception & e ) {
 		printf( e.what( ) );
 	}
 	return 0;
