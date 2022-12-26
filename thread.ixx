@@ -208,8 +208,13 @@ namespace cpp
 
     inline void Thread::check( )
     {
-        if ( m_info )
-            { m_info->checkException( ); }
+        try 
+        {
+            if ( m_info )
+                { m_info->checkException( ); }
+        }
+        catch ( InterruptException & )
+            { }
     }
 
 
